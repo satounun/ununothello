@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    background-color: papayawhip;
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px auto 5px;
+}
+.score{
+    display: flex;
+    justify-content: center;
+}
+.now{
+    margin: 0 40px;
+}
+p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 40px;
+}
+.black{
+    background-color: #000;
+    color: #fff;
+}
+.white{
+    background-color: #fff;
+    color: #000;
+}
+.stage{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #008000;
+    margin: 10px auto;
+    width: 404px;
+    height: 404px;
+}
+.square{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: solid #000;
+    border-width: 0 4px 4px 0;
+    cursor: pointer;
+}
+.square:nth-child(-n + 8){
+    border-width: 4px 4px 4px 0;
+    height: 54px;
+}
+.square:nth-child(8n + 1){
+    border-width: 0 4px 4px 4px;
+    width: 54px;
+}
+.square:first-child{
+    border-width: 4px;
+    width: 54px;
+    height: 54px;
+}
+.stone{
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    left: 2px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.stone[data-state="0"]{
+    display: none;
+}
+.stone[data-state="1"]{
+    background-color: #000;
+}
+.stone[data-state="2"]{
+    background-color: #fff;
+}
+#square-template{
+    display: none;
+}
+body div:last-of-type{
+    text-align: center;
+}
+button{
+    background-color: cornflowerblue;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.1);
+}
+@media screen and (max-width:600px){
+    h1{
+        margin: 30px 0;
+    }
+    .score{
+        flex-flow: column;
+    }
+    .now{
+        order: -1;
+    }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Othello</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+    <body>
+        <h1>オセロへようこそ</h1>
+        <div class="score">
+            <p>BlackScore：<span id="black_score" class="black">2</span></p>
+            <p class="now">現在の手番は<span id="current_turn">黒</span>です</p>
+            <p>WhiteScore：<span id="white_score" class="white">2</span></p>
+        </div>
+        <div id="stage" class="stage"></div>
+        <div id="square-template" class="square">
+            <div class="stone"></div>
+        </div>
+        <div><button id="pass">PASS</button></div>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
